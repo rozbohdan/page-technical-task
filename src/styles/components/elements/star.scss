@@ -1,0 +1,15 @@
+.star {
+  background: url("../../assets/images/star.svg") no-repeat center;
+  min-width: 12px;
+  max-width: 12px;
+  min-height: 12px;
+  max-height: 12px;
+
+  &.mt-small {
+    margin-top: 6px;
+  }
+
+  &.mb-middle {
+    margin-bottom: 10px;
+  }
+}

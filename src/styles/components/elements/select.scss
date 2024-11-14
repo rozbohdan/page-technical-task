@@ -1,0 +1,39 @@
+//settings
+@import "../../settings/app.colors.style";
+@import "../../settings/app.settings.style";
+
+.select {
+  &-selected {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-13;
+    font-weight: $font-weight-semi-bold;
+    line-height: $line-height-18;
+    background: $background-gray;
+    border-radius: $border-radius-sm;
+    padding: 12px 16px;
+
+    &:before {
+      content: '';
+      min-width: 14px;
+      max-width: 14px;
+      min-height: 14px;
+      max-height: 14px;
+      margin-right: 12px;
+    }
+
+    &.person {
+      &:before {
+        background: url("../../assets/images/person.svg") no-repeat center;
+        background-size: contain;
+      }
+    }
+
+    &.calendar {
+      &:before {
+        background: url("../../assets/images/calendar.svg") no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}

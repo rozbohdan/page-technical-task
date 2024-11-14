@@ -1,0 +1,74 @@
+//settings
+@import "../settings/app.settings.style";
+@import "../settings/app.colors.style";
+
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+
+  @media screen and (min-width: $screen-md-min) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &.sticky {
+    position: fixed;
+    transform: translateY(0);
+    background: $background-light;
+  }
+
+  &-content {
+    display: grid;
+    grid-gap: 16px;
+    align-items: center;
+    grid-template-areas: "logo nav"
+    "buttons buttons";
+
+    @media screen and (min-width: $screen-sm-min) {
+      grid-template-columns: 1fr auto auto;
+      grid-template-areas: "logo buttons nav";
+      grid-gap: 0;
+    }
+
+    @media screen and (min-width: $screen-lg-min) {
+      grid-template-areas: "logo nav buttons";
+    }
+  }
+
+  &-nav {
+    margin-left: auto;
+    grid-area: nav;
+
+    @media screen and (min-width: $screen-sm-min) {
+      margin-left: 20px;
+    }
+
+    @media screen and (min-width: $screen-lg-min) {
+      margin-right: 38px;
+      margin-left: 38px;
+      max-width: 350px;
+    }
+  }
+
+  &-buttons {
+    grid-area: buttons;
+
+    @media screen and (max-width: $screen-tin) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media screen and (min-width: $screen-sm-min) {
+      justify-content: flex-end;
+    }
+  }
+
+  &-logo {
+    grid-area: logo;
+  }
+}

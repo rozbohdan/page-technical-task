@@ -1,0 +1,28 @@
+//settings
+@import "../../settings/app.colors.style";
+@import "../../settings/app.settings.style";
+
+.btn {
+  border-radius: $border-radius-sm;
+  font-size: $font-size-13;
+  font-weight: $font-weight-semi-bold;
+  line-height: $line-height-20;
+  color: $text-light;
+  background: transparent;
+  border: none;
+  padding: 10px 16px;
+  white-space: nowrap;
+
+  @media screen and (min-width: $screen-md-min) {
+    padding: 12px 20px;
+    font-size: $font-size-15;
+  }
+
+  &.primary {
+    background: $background-primary;
+  }
+
+  &.accent {
+    background: $background-accent;
+  }
+}

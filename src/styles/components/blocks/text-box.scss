@@ -1,0 +1,14 @@
+.text-box {
+  &.center {
+    text-align: center;
+  }
+
+  &.m-x-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.width-middle {
+    max-width: 690px;
+  }
+}

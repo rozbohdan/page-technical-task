@@ -1,0 +1,64 @@
+//settings
+@import "../../settings/app.colors.style";
+@import "../../settings/app.settings.style";
+
+.nav {
+  position: relative;
+
+  &.opened {
+    .nav-list {
+      @media screen and (max-width: $screen-lg-min) {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: absolute;
+        background: $background-light;
+        padding: 16px;
+        right: 0;
+        top: 24px;
+        z-index: 2;
+      }
+    }
+  }
+
+  &-item {
+    font-size: $font-size-15;
+    font-weight: $font-weight-semi-bold;
+    line-height: $line-height-20;
+    color: $text-darker;
+  }
+
+  &-list {
+    display: none;
+    align-items: center;
+    gap: 38px;
+    white-space: nowrap;
+    overflow: auto;
+
+    @media screen and (min-width: $screen-lg-min) {
+      display: flex;
+    }
+  }
+
+  &-btn {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background: transparent;
+
+    @media screen and (min-width: $screen-lg-min) {
+      display: none;
+    }
+  }
+
+  &-btn-span {
+    height: 2px;
+    width: 100%;
+    background: $background-dark;
+  }
+}

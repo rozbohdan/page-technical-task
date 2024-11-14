@@ -1,0 +1,46 @@
+//settings
+@import "../../settings/app.colors.style";
+@import "../../settings/app.settings.style";
+
+.default-text {
+  color: $text-dark;
+  line-height: $line-height-30;
+
+  &.small {
+    font-size: $font-size-15;
+  }
+
+  &.middle {
+    font-size: $font-size-17;
+  }
+
+  &.large {
+    font-size: $font-size-22;
+  }
+
+  &.extra-xxl {
+    font-size: $font-size-40;
+    line-height: $line-height-48;
+
+    @media screen and (min-width: $screen-md-min) {
+      font-size: $font-size-60;
+      line-height: $line-height-80;
+    }
+  }
+
+  &.semi-bold {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  &.primary {
+    color: $text-primary;
+  }
+
+  &.light {
+    color: $text-light;
+  }
+
+  &.mt-tiny {
+    margin-top: 3px;
+  }
+}

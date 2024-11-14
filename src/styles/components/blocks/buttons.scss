@@ -1,0 +1,12 @@
+//settings
+@import "../../settings/app.settings.style";
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media screen and (min-width: $screen-lg-min) {
+    gap: 20px;
+  }
+}
